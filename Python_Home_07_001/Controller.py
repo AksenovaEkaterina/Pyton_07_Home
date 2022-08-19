@@ -2,6 +2,8 @@ from gettext import find
 from http.client import OK
 import logger
 import logger
+import json
+import pandas as pd
 
 
 
@@ -51,9 +53,12 @@ def del_contact():
         file.write(result)
     print ("Контакт удален")
 # del_contact()
-print("Введите код операции:\n 1 - вывод информации о контакте в одной строке \n 1 - вывод информации о контакте в столбик \n 3 - поиск контакта по имени \n 4 - добавление контакта \n 5- удаление контакта ")
-cod_operation = int(input('--> '))
-if cod_operation ==1: print_all_cont ()
-if cod_operation ==3: print (find_contact ())
-if cod_operation ==4: print (create_new_cont ())
-if cod_operation ==5: print (del_contact ())
+# print("Введите код операции:\n 1 - вывод информации о контакте в одной строке \n 1 - вывод информации о контакте в столбик \n 3 - поиск контакта по имени \n 4 - добавление контакта \n 5- удаление контакта ")
+# cod_operation = int(input('--> '))
+# if cod_operation ==1: print_all_cont ()
+# if cod_operation ==3: print (find_contact ())
+# if cod_operation ==4: print (create_new_cont ())
+# if cod_operation ==5: print (del_contact ())
+
+# d = {'Name': ['Pyotr', 'Kate'], 'surname': ['Stepanov','Smirnov']}
+# print (pd.DataFrame(data=d))
